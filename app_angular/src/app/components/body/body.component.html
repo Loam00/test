@@ -1,0 +1,59 @@
+
+<div class="container" [ngClass]="searched ? 'searched' : '' ">
+  <div class="formDiv">
+    <form class="form" #formDirective="ngForm" [formGroup]="form" (ngSubmit)="search(form.value)">
+      <input class="inputNumber" type="number" placeholder="Minimum Total" formControlName="minimumTotal">
+
+      <span>Seleziona uno store</span>
+
+      <table class="tableContainer">
+          <tr class="tableHeader">
+            <th>Store ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+          </tr>
+
+          <tr class="stores" *ngFor="let store of stores; index as storeNumber">
+              <td>{{store.store_id}}</td>
+              <td>{{store.first_name}}</td>
+              <td>{{store.last_name}}</td>
+              <td>{{store.email}}</td>
+              <input type="checkbox" class="checkbox" formControlName="storeNumber" [value]="store.store_id" [checked]="store.isChecked" (click)="isClicked(storeNumber)">
+          </tr>
+      </table>
+
+      <button type="submit">Search</button>
+
+    </form>
+  </div>
+
+  <div *ngIf="searched">
+    <table>
+      <tr>
+        <th>Customer ID</th>
+        <th>Store ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Address ID</th>
+        <th>Active</th>
+        <th>Create Date</th>
+        <th>Last Update</th>
+        <th>Amount</th>
+      </tr>
+      <tr *ngFor="let customer of customers">
+        <th>{{customer.customer_id}}</th>
+        <th>{{customer.store_id}}</th>
+        <th>{{customer.first_name}}</th>
+        <th>{{customer.last_name}}</th>
+        <th>{{customer.email}}</th>
+        <th>{{customer.address_id}}</th>
+        <th>{{customer.active}}</th>
+        <th>{{customer.create_date}}</th>
+        <th>{{customer.last_update}}</th>
+        <th>{{customer.amount}}</th>
+      </tr>
+    </table>
+  </div>
+</div>

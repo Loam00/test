@@ -1,0 +1,90 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 20px;
+  background: rgb(81, 106, 114);
+}
+
+span {
+  margin: 10px;
+  font-size: 20px;
+}
+
+.searched {
+  height: 100%;
+}
+
+.form {
+/*   width: 500px; */
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+  background: transparent;
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inputNumber {
+  height: 40px;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  background: transparent;
+  color: black;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.checkbox{
+  transform: scale(2);
+  margin: 20px 5px 20px 20px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+}
+
+.form button {
+  background: black;
+  padding: 10px;
+  margin: 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+.tableContainer {
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
+}
+
+table, th, tr, td {
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+
