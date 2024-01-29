@@ -2,6 +2,7 @@ const mysql = require("mysql2");
 
 const config = require("../config/config.json");
 
+//piccolo appunto: mai pushare i file di configurazione nel repo (vulnerabilità credenziali)
 const pool = mysql.createConnection({
     host: config.host,
     user: config.user,
