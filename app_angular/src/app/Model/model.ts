@@ -1,3 +1,5 @@
+//Se volessimo essere puntigliosi potremmo separare anche i modelli frontend in file diversi
+//ma questa è più filosofia che altro, di solito non lo fa nessuno a front end
 export interface Data {
   customer_id: number,
   store_id: number,

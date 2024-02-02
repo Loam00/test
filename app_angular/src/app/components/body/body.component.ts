@@ -8,6 +8,9 @@ interface formValue {
   storeNumber: number
 }
 
+//body contiene le logiche dei componenti, ma è una pagina, di solito è meglio scorporare le due logiche
+//esempio: il componente Body lo potresti usare per gestire la pagina e le sue logiche interne di caricamento dati
+//scorporerei però componenti come la tabella
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
